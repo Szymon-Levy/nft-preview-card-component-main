@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Cyan-transparent: hsla(178, 100%, 50%, 0.55);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--Very-dark-blue-main);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--Soft-blue);
+    line-height: 28px;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    color: var(--White);
+    text-decoration: none;
+    transition: .4s;
+}
+
+a:hover{
+    color: var(--Cyan);
+}
+
+.card-container{
+    width: 100%;
+    max-width: 370px;
+    background-color: var(--Very-dark-blue-card);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.img-wrapper{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper::after{
+    content: "";
+    background-image: url("images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-color: var(--Cyan-transparent);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    opacity: 0;
+}
+
+.img-wrapper:hover::after{
+    opacity: 1;
+    cursor: pointer;
+}
+
+h3{
+    color: var(--White);
+    font-size: 25px;
+    padding: 20px 0 20px;
+    transition: .4s;
+}
+
+h3:hover{
+    color: var(--Cyan);
+}
+
+.details-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.details-icons .points,
+.details-icons .time-remain{
+    display: flex;
+    align-items: center;    
+}
+
+.details-icons .points img,
+.details-icons .time-remain img{
+    margin-right: 7px;
+}
+
+.details-icons .points span{
+    color: var(--Cyan);
+}
+
+.divider{
+    height: 1px;
+    background-color: var(--Very-dark-blue-line);
+    margin: 30px 0 22px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img{
+    max-width: 35px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.author p{
+    font-size: 16px;
+}
